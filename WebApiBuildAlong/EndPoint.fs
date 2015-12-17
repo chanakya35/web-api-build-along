@@ -30,7 +30,7 @@ type EndPoint() =
             let! msg = inbox.Receive()
             match msg, state with
             | Start, NotRunning ->
-                let baseAddress = System.Configuration.ConfigurationManager.AppSettings.["baseAddress"]
+                let baseAddress = ConfigurationManager.AppSettings.["baseAddress"]
                 let server = WebApp.Start<Startup>(baseAddress)
                 printfn "Listening at %s" baseAddress
                 return! loop (Running(server))

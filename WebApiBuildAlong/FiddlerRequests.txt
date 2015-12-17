@@ -1,0 +1,9 @@
+http://localhost:4445/api/ping (GET)
+Accept: application/json
+Content-Type: application/json;charset=UTF8
+User-Agent: Fiddler
+Host: localhost:4445
+
+http://localhost:4445/api/people/12 (POST)
+Payload: {"Id":12,"Name":"Bob","Age":40,"Products":[{"Descr":"Best Product","Price":34.95}]}
+
